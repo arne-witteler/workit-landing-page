@@ -8,13 +8,17 @@
     <title>Frontend Mentor | Workit landing page</title>
   </head>
   <body>
-    <main>
+    <main class="container">
       <section class="hero">
-        <img class="hero__logo" src="./assets/images/logo-light.svg" alt="Workit logo light"/>
-        <a class="hero__link">Apply for access</a>
-        <h1 class="hero__title">Data tailored to your needs.</h1>
+        <div class="hero__header">
+          <img class="hero__logo" src="./assets/images/logo-light.svg" alt="Workit logo light"/>
+          <a class="hero__link">Apply for access</a>
+        </div>
+        <h1 class="hero__title">Data <span class="hero__title--highlighted">tailored</span> to your needs.</h1>
         <button class="hero__button">Learn more</button>
-        <img class="hero__image" src="./assets/images/image-hero.webp" alt="Hero image"/>
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="./assets/images/image-hero.webp" alt="Hero image"/>
+        </div>
       </section>
       <section class="features">
         <ul class="features__list">
@@ -36,16 +40,22 @@
         </ul>
       </section>
       <section class="founder">
-        <img class="founder__image" src="./assets/images/image-founder.webp" alt="Louis Graham, founder of the company"/>
-        <h3 class="founder__title">Be the first to test</h3>
-        <p class="founder__description" >Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a beta tester for our app and kickstart your company. Apply for access below and I’ll be in touch to schedule a call.</p>
-        <button class="founder__button" >Apply for access</button>
-        <img class="founder__logo" src="./assets/images/logo-dark.svg" alt="Workit logo dark"/>
-        <ul class="founder__socials">
-          <li class="founder__socials-item"><img src="./assets/images/icon-facebook.svg" alt="Facebook icon"/></li>
-          <li class="founder__socials-item"><img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/></li>
-          <li class="founder__socials-item"><img src="./assets/images/icon-instagram.svg" alt="Instagram icon"/></li>
-        </ul>
+        <div class="founder__image-wrapper">
+          <img class="founder__image" src="./assets/images/image-founder.webp" alt="Louis Graham, founder of the company"/>
+        </div>
+        <div class="founder__card">
+          <h3 class="founder__title">Be the first to test</h3>
+          <p class="founder__description" >Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a beta tester for our app and kickstart your company. Apply for access below and I’ll be in touch to schedule a call.</p>
+          <button class="founder__button" >Apply for access</button>
+        </div>
+        <div class="founder__footer">
+          <img class="founder__logo" src="./assets/images/logo-dark.svg" alt="Workit logo dark"/>
+          <ul class="founder__socials">
+            <li class="founder__socials-item"><img src="./assets/images/icon-facebook.svg" alt="Facebook icon"/></li>
+            <li class="founder__socials-item"><img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/></li>
+            <li class="founder__socials-item"><img src="./assets/images/icon-instagram.svg" alt="Instagram icon"/></li>
+          </ul>
+        </div>
       </section>
       <footer>
         <p>Challenge by <a href="https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/arne-witteler">Arne Witteler</a>.</p>
