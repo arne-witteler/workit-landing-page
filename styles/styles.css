@@ -16,7 +16,7 @@ html, body {
 
 body {
   font-family: var(--font-family-body);
-  background-color: var(--color-purple-100);
+  background-color: var(--color-white);
   color: var(--color-purple-900);
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 /* ============================= */
-/* HERO                         */
+/* HERO MOBILE                   */
 /* ============================= */
 
 .hero {
@@ -35,6 +35,7 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
+  overflow: visible;
 }
 
 .hero__header {
@@ -80,37 +81,34 @@ body {
 }
 
 .hero__image-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: -180px;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-}
-
-.hero__image-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: -80px;
-  margin-bottom: 40px;
+  width: 90%;
+  z-index: 2;
 }
 
 .hero__image {
   width: 100%;
   max-width: 420px;
-  z-index: 10;
-  transform: translateX(10px);
+  height: auto;
 }
 
 /* ============================= */
-/* FEATURES                     */
+/* FEATURES MOBILE               */
 /* ============================= */
 
 .features {
+  margin-top: -5px;
   background: var(--color-purple-100);
   text-align: center;
   position: relative;
   overflow: hidden;
   padding: 64px 24px;
   z-index: -10px;
-  border-bottom-left-radius: 90% 10%;
-  border-bottom-right-radius: 90% 10%;
 }
 
 .features__list {
@@ -118,6 +116,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  margin-top: 100px;
 }
 
 .features__item {
@@ -150,7 +149,7 @@ body {
 }
 
 /* ============================= */
-/* FOUNDER                      */
+/* FOUNDER MOBILE                */
 /* ============================= */
 
 .founder {
@@ -207,6 +206,10 @@ body {
   cursor: pointer;
 }
 
+.founder__signature {
+  display: none;
+}
+
 .founder__footer {
   margin-top: 80px;
   text-align: center;
@@ -242,6 +245,10 @@ footer p {
 
 @media (min-width: 768px) {
 
+  /* ============================= */
+  /* HERO TABLET                   */
+  /* ============================= */
+
   .hero {
     background-color: var(--color-purple-900);
     padding: 48px 24px 140px;
@@ -267,8 +274,34 @@ footer p {
     width: 50%;
   }
 
+  .hero__button {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 80px;
+  }
+
+  .hero__image-wrapper {
+    bottom: -200px;
+    width: 90%;
+    z-index: 2;
+  }
+
+  .hero__image {
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  /* ============================= */
+  /* FEATURES TABLET               */
+  /* ============================= */
+
   .features {
     padding: 0 44px;
+  }
+
+  .features__list {
+    margin-top: 180px;
   }
 
   .features__item {
@@ -292,6 +325,10 @@ footer p {
     font-weight: 400;
   }
 
+  /* ============================= */
+  /* FOUNDER TABLET                */
+  /* ============================= */
+
   .founder {
     padding: 180px 44px 0;
   }
@@ -308,6 +345,7 @@ footer p {
     align-self: flex-end;
     text-align: left;
     padding: 48px;
+    position: relative;
   }
 
   .founder__title {
@@ -325,12 +363,24 @@ footer p {
     font-size: 18px;
     line-height: 1.8;
   }
+  
+  .founder__signature {
+    display: block;
+    position: absolute;
+    bottom: -70px;
+    right: 32px;
+    width: 170px;
+  }
 
   @media (min-width: 1024px) {
     .hero__title {
       font-size: 80px;
       width: 60%;
     }
+
+    /* ============================= */
+    /* FEATURES DESKTOP              */
+    /* ============================= */
 
     .features {
       padding: 0 80px;
