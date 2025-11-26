@@ -56,12 +56,13 @@ body {
 }
 
 .hero__title {
-  margin-top: 56px;
+  margin: 56px auto 0;
   font-family: var(--font-family-heading);
   font-size: 44px;
   color: var(--color-white);
   font-weight: 400;
   line-height: 1.1;
+  width: 80%;
 }
 
 .hero__title--highlighted {
@@ -238,3 +239,147 @@ footer p {
   color: var(--color-purple-500);
   margin: 80px 0 20px;
 }
+
+@media (min-width: 768px) {
+
+  .hero {
+    background-color: var(--color-purple-900);
+    padding: 48px 24px 140px;
+    text-align: center;
+    background-image: 
+      url("../assets/images/bg-pattern-1.svg"), 
+      url("../assets/images/bg-pattern-2.svg");
+    background-repeat: no-repeat;
+    background-size:
+      270px,    
+      180px;
+    background-position:
+      -170px 50%,   
+      calc(100% + 100px) 85%;
+  }
+
+  .hero__title {
+    font-size: 60px;
+    color: var(--color-white);
+    font-weight: 400;
+    line-height: 1;
+    margin: 56px auto 0;
+    width: 50%;
+  }
+
+  .features {
+    padding: 0 44px;
+  }
+
+  .features__item {
+    flex-direction: row;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .features__number {
+    margin-right: 56px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+  }
+
+  .features__title {
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  .founder {
+    padding: 180px 44px 0;
+  }
+
+  .founder__image-wrapper {
+    width: 280px;
+    height: 280px;
+    margin-bottom: -90px;
+    align-self: flex-start;
+  }
+
+  .founder__card {
+    max-width: 75%;
+    align-self: flex-end;
+    text-align: left;
+    padding: 48px;
+  }
+
+  .founder__title {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .founder__description {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .founder__button {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  @media (min-width: 1024px) {
+    .hero__title {
+      font-size: 80px;
+      width: 60%;
+    }
+
+    .features {
+      padding: 0 80px;
+    }
+
+    .features__list {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .features__item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .features__number {
+      margin-right: 0;
+      margin-bottom: 56px;
+    }
+
+    .features__title {
+      width: 110%;
+      margin: 0 auto 28px
+    }
+
+    .founder {
+      padding: 200px 80px 0;
+    }
+
+    .founder__image-wrapper {
+      width: 477px;
+      height: 477px;
+      margin-bottom: -290px;
+      align-self: flex-start;
+    }
+
+    .founder__card {
+      max-width: 60%;
+      align-self: flex-end;
+    }
+
+    .founder__title {
+      font-size: 56px;
+      line-height: 1.2;
+    }
+
+    .founder__description {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+  }}
